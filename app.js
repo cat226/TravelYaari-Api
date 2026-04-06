@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
@@ -38,7 +39,7 @@ app.use('/api', authRoutes);
 app.use('/api', userRoutes);
 app.use('/api', categoryRoutes);
 app.use('/api', productRoutes);
-app.use('/api', braintreeRoutes);
+//app.use('/api', braintreeRoutes);
 app.use('/api', orderRoutes);
 
 const port = process.env.PORT || 5000;
